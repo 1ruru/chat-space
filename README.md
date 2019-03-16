@@ -47,7 +47,7 @@
 |----------|--------|--------------------------------|
 | user_id  | refference    | null: false, foreign_key: true |
 | group_id | refference    | null: false, foreign_key: true |
-| body     | text   | null: false                    |
+| body     | text   |                                |
 | image    | string |                                |
 
 ### Association
