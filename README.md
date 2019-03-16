@@ -15,12 +15,12 @@
 
 ## usersテーブル
 
-| Column   | Type   | Options                        |
-|----------|--------|--------------------------------|
-| name     | string | null: false                    |
-| mail     | string | null: false, unique: true      |
-| password | string | null: false                    |
-| group_id | int    | null: false, foreign_key: true |
+| Column   | Type   | Options                                     |
+|----------|--------|---------------------------------------------|
+| name     | string | null: false, unique: true, index: true      |
+| mail     | string | null: false, unique: true, index: true      |
+| password | string | null: false                                 |
+| group_id | int    | null: false, foreign_key: true              |
 
 ### Association
 
