@@ -4,8 +4,8 @@
 
 | Column   | Type | Options                        |
 |----------|------|--------------------------------|
-| user_id  | int  | null: false, foreign_key: true |
-| group_id | int  | null: false, foreign_key: true |
+| user_id  | refference  | null: false, foreign_key: true |
+| group_id | refference  | null: false, foreign_key: true |
 
 ### Association
 
@@ -20,7 +20,7 @@
 | name     | string | null: false, unique: true, index: true      |
 | mail     | string | null: false, unique: true, index: true      |
 | password | string | null: false                                 |
-| group_id | int    | null: false, foreign_key: true              |
+| group_id | refference    | null: false, foreign_key: true              |
 
 ### Association
 
@@ -33,7 +33,7 @@
 | Column  | Type   | Options                        |
 |---------|--------|--------------------------------|
 | name    | string | null: false                    |
-| user_id | int    | null: false, foreign_key: true |
+| user_id | refference    | null: false, foreign_key: true |
 
 ### Association
 
@@ -45,8 +45,8 @@
 
 | Column   | Type   | Options                        |
 |----------|--------|--------------------------------|
-| user_id  | int    | null: false, foreign_key: true |
-| group_id | int    | null: false, foreign_key: true |
+| user_id  | refference    | null: false, foreign_key: true |
+| group_id | refference    | null: false, foreign_key: true |
 | body     | text   | null: false                    |
 | image    | string |                                |
 
