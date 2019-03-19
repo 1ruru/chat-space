@@ -1,0 +1,29 @@
+$font-white: #FFF;
+$color_flash-body: #38aef0;
+$color_side-body: #2f3e51;
+$color_side-top: #253141;
+$color_main-body: #fafafa;
+$color_main-border: #eeeeee;
+$color_main-group-edit: #38aef0;
+$color_main-group-name: #333333;
+$color_main-group-members: #999999;
+$color_main-user-text: #434A54;
+
+$pad_side-lr: 20px;
+$pad_side-group-ud: 20px;
+$pad_main-lr: 40px;
+$pad_main-bet-header-body: 26px;
+$pad_main-body-ud: 20px;
+$pad-s: 10px;
+$pad-m: 20px;
+
+$height_header: 100px;
+$height_main-group-edit: 40px;
+$height_main-form: 90px;
+$height_main-form-input: 50px;
+$height_main-body: calc(100vh - #{$height_header} - #{$height_main-form} - #{$pad_main-body-ud} - #{$pad_main-bet-header-body});
+
+$width_side: 300px;
+$width_main-form-submit: 100px;
+$width_main: calc(100vw - #{$width_side});
+$width_main-form-input-text: calc(#{$width_main} - #{$pad_main-lr}*2 - 100px - #{$pad-s}*3 - 15px);

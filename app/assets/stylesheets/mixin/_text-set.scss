@@ -1,0 +1,14 @@
+@mixin text-set(){
+  & input[type="text"]{
+    padding: 0;
+    padding-left: $pad-s;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    background: $color_main-body;
+  }
+  & input[type="text"]::placeholder{
+    color: $color_main-user-text;
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,79 @@
+.flash-box
+  .notice
+    グループを作成しました
+
+.contents
+  .content-side
+    .side-header
+      .side-header__box
+        %p.side-header__box--user-name
+          test-user
+        %ul.side-header__box__menu
+          %li.side-header__box__menu--edit-user
+            %a(href="#")
+              %i.fa.fa-edit
+          %li.side-header__box__menu--add-group
+            %a(href="#")
+              %i.fa.fa-gear
+    .side-groups
+      %a(href="#")
+        .group
+          %p.group__group-name
+            test-group
+          %p.group__latest-message
+            さようなら
+    .side-groups
+      %a(href="#")
+        .group
+          %p.group__group-name
+            sample-group
+          %p.group__latest-message
+            hello!
+    .side-groups
+      %a(href="#")
+        .group
+          %p.group__group-name
+            example
+          %p.group__latest-message
+            まだメッセージがありません
+  .content-main
+    .main-header
+      .main-header__left-box
+        %p.main-header__left-box--group-name
+          test-group
+        %p.main-header__left-box--group-members
+          Member : test-user
+      .main-header__right-box
+        %a(href="#")
+          .main-header__right-box--group-edit
+            Edit
+    .main-body
+      .message
+        .message__post-info
+          %p.message__post-info--post-user
+            test-user
+          %p.message__post-info--post-date
+            2019/03/18(Mon) 14:57:30
+        %p.message__post-message
+          こんにちは！
+      .message
+        .message__post-info
+          %p.message__post-info--post-user
+            test-user
+          %p.message__post-info--post-date
+            2019/03/18(Mon) 17:57:50
+        %p.message__post-message
+          さようなら
+    .main-form
+      .form-body
+        %form(action="#" method="post")
+          .new-message
+            .new-message__input-box
+              %input.new-message__input-box--text(type="text" placeholder="type a message")
+              .new-message__input-box__image-box
+                %label
+                %i.fa.fa-image.fa-lg.new-message__input-box__image-box--image
+                %input.new-message__input-box__image-box--filesend(type="file" multiple accept=".jpg,.gif,.png,image/gif,image/jpeg,image/png")
+            .new-message__input-box--send
+              %input(type="submit" value="Send")
+
