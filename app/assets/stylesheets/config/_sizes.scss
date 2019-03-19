@@ -1,0 +1,10 @@
+$height_header: 100px;
+$height_main-group-edit: 40px;
+$height_main-form: 90px;
+$height_main-form-input: 50px;
+$height_main-body: calc(100vh - #{$height_header} - #{$height_main-form} - #{$pad_main-body-ud} - #{$pad_main-bet-header-body});
+
+$width_side: 300px;
+$width_main-form-submit: 100px;
+$width_main: calc(100vw - #{$width_side});
+$width_main-form-input-text: calc(#{$width_main} - #{$pad_main-lr}*2 - 100px - #{$pad-s}*3 - 15px);

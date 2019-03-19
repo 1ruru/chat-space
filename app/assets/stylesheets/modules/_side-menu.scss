@@ -1,0 +1,37 @@
+.content-side{
+  width: $width_side;
+  background-color: $color_side-body;
+  color: $font-white;
+  .side-header{
+    height: $height_header;
+    padding: 0 $pad_side-lr;
+    background-color: $color_side-top;
+    &__box{
+      height: 100%;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 16px;
+      &__menu{
+        display: flex;
+        &--add-group{
+          margin-left: 6px;
+        }
+      }
+    }
+  }
+  .side-groups{
+    padding: $pad_side-group-ud $pad_side-lr;
+    font-weight: bold;
+    .group{
+      &__group-name{
+        font-size: 15px;
+        padding-bottom: 5px;
+      }
+      &__latest-message{
+        font-size: 11px;
+      }
+    }
+  }
+}
