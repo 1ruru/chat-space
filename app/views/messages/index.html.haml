@@ -1,20 +1,19 @@
-.flash-box
-  .notice
-    グループを作成しました
-
+-# .flash-box
+-#   .notice
+-#     グループを作成しました
 .contents
   .content-side
     .side-header
       .side-header__box
         %p.side-header__box--user-name
-          test-user
+          = current_user.name
         %ul.side-header__box__menu
           %li.side-header__box__menu--edit-user
-            %a(href="#")
-              %i.fa.fa-edit
+            = link_to do
+              = fa_icon 'edit', class: 'icon'
           %li.side-header__box__menu--add-group
-            %a(href="#")
-              %i.fa.fa-gear
+            = link_to edit_user_path(current_user) do
+              = fa_icon 'gear', class: 'icon'
     .side-groups
       %a(href="#")
         .group
