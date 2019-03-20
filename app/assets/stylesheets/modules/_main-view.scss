@@ -1,0 +1,9 @@
+.contents{
+  @include a-color-unchanged();
+  height: 100vh;
+  width: 100%;
+  display: flex;
+
+  @import "./side-menu";
+  @import "./messages";
+}
