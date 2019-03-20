@@ -22,9 +22,10 @@
     }
   }
   .side-groups{
-    padding: $pad_side-group-ud $pad_side-lr;
+    padding: 0 $pad_side-lr;
     font-weight: bold;
     .group{
+      padding: $pad_side-group-ud 0;
       &__group-name{
         font-size: 15px;
         padding-bottom: 5px;
