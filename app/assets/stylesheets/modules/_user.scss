@@ -1,6 +1,6 @@
 .account-page {
   &__inner {
-    width: 980px;
+    width: 858px;
     margin: 60px auto;
     padding: 60px;
     background-color: #fff;
@@ -80,6 +80,7 @@
     text-align: center;
     border: none;
     border-radius: 2px;
+    text-decoration: none;
   }
 
   input[type='submit'] {
@@ -94,6 +95,10 @@
       display: inline-block;
       color: #d65f4c;
       font-weight: 400;
+    }
+    &--italic{
+      font-size: 11px;
+      font-style: italic;
     }
   }
 
@@ -114,6 +119,8 @@
     }
   }
 }
+
+
 
 #error_explanation {
   margin: 20px 0;
