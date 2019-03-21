@@ -13,32 +13,17 @@
             .main-header__right-box--group-edit
               Edit
     .main-body
-      .message
-        .message__post-info
-          %p.message__post-info--post-user
-            test-user
-          %p.message__post-info--post-date
-            2019/03/18(Mon) 14:57:30
-        %p.message__post-message
-          こんにちは！
-      .message
-        .message__post-info
-          %p.message__post-info--post-user
-            test-user
-          %p.message__post-info--post-date
-            2019/03/18(Mon) 17:57:50
-        %p.message__post-message
-          さようなら
+      = render partial: 'messages', locals: {messages: @messages }
     .main-form
       .form-body
-        %form(action="#" method="post")
+        = form_for [@group, @message] do |f|
           .new-message
             .new-message__input-box
-              %input.new-message__input-box--text(type="text" placeholder="type a message")
+              = f.text_field :body, class: "new-message__input-box--text", placeholder: 'type a message'
               .new-message__input-box__image-box
-                %label
-                %i.fa.fa-image.fa-lg.new-message__input-box__image-box--image
-                %input.new-message__input-box__image-box--filesend(type="file" multiple accept=".jpg,.gif,.png,image/gif,image/jpeg,image/png")
+                = f.label :image do
+                  = fa_icon 'fa-image', class: 'fa fa-image fa-lg new-message__input-box__image-box--image'
+                  = f.file_field :image, class: 'new-message__input-box__image-box--filesend'
             .new-message__input-box--send
-              %input(type="submit" value="Send")
+              = f.submit 'Send'
 

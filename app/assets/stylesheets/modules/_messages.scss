@@ -36,6 +36,7 @@
   .main-body{
     padding: $pad_main-bet-header-body $pad_main-lr $pad_main-body-ud;
     height: $height_main-body;
+    overflow: scroll;
     .message{
       padding: $pad_main-body-ud 0;
       &__post-info{
