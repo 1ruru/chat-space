@@ -1,0 +1,11 @@
+- @messages.each do |message|
+  .message
+    .message__post-info
+      %p.message__post-info--post-user
+        = message.user.name
+      %p.message__post-info--post-date
+        = message.created_at.strftime("%Y/%m/%d(%a) %H:%M:%S")
+    -if message.body.present?
+      %p.message__post-message
+        = message.body
+    = image_tag message.image.url if message.image.present?
