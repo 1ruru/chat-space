@@ -4,9 +4,11 @@
     .main-header
       .main-header__left-box
         %p.main-header__left-box--group-name
-          test-group
+          =@group.name
         %p.main-header__left-box--group-members
-          Member : test-user
+          Member :
+          - @group.users.each do |user|
+            =user.name
       -if params[:group_id]
         .main-header__right-box
           = link_to edit_group_path(params[:group_id]) do
