@@ -15,17 +15,17 @@
             .main-header__right-box--group-edit
               Edit
     .main-body
-      = render partial: 'messages', locals: {messages: @messages }
+      .messages
+        = render partial: 'messages', locals: {messages: @messages }
     .main-form
-      .form-body
-        = form_for [@group, @message] do |f|
-          .new-message
-            .new-message__input-box
-              = f.text_field :body, class: "new-message__input-box--text", placeholder: 'type a message'
-              .new-message__input-box__image-box
-                = f.label :image do
-                  = fa_icon 'fa-image', class: 'fa fa-image fa-lg new-message__input-box__image-box--image'
-                  = f.file_field :image, class: 'new-message__input-box__image-box--filesend'
-            .new-message__input-box--send
-              = f.submit 'Send'
+      = form_for [@group, @message], html:{class:"form-body"} do |f|
+        .new-message
+          .new-message__input-box
+            = f.text_field :body, class: "new-message__input-box--text", placeholder: 'type a message'
+            .new-message__input-box__image-box
+              = f.label :image do
+                = fa_icon 'fa-image', class: 'fa fa-image fa-lg new-message__input-box__image-box--image'
+                = f.file_field :image, class: 'new-message__input-box__image-box--filesend'
+          .new-message__input-box--send
+            = f.submit 'Send', class:'form-submit'
 
