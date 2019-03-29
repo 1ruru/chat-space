@@ -1,5 +1,4 @@
 $(function(){
-
   var search_list = $('#user-search-result');
   var member_list = $('#group-member-list');
 
@@ -32,7 +31,6 @@ $(function(){
 
   $('#user-search-field').on('keyup', function(){
     var input = $('#user-search-field').val();
-    console.log(input);
     $.ajax({
       type: "GET",
       url: '/groups/new',
@@ -40,7 +38,6 @@ $(function(){
       dataType: "json",
     })
     .done(function(groups){
-      console.log(groups.length);
       $('#user-search-result').empty();
       if(groups.length !== 0){
         groups.forEach(function(group){
@@ -60,7 +57,6 @@ $(function(){
 
     $('#user-search-result').on('click', '.user-search-add', function(e){
       e.preventDefault();
-      console.log("user-search-add was clicked");
       var user_data = {};
       var id_str = $(this).attr('data_user_id');
       user_data.id = parseInt(id_str, 10);
@@ -72,7 +68,6 @@ $(function(){
         $(checkbox_select).prop("checked", true);
         members.push(user_data.id);
         $(user_search_select).parent().remove();
-        console.log(members);
       }
       else{
         alert('そのユーザーはすでに追加されています')
@@ -83,15 +78,12 @@ $(function(){
 
   $('#group-member-list').on('click', '.user-search-remove', function(e){
     e.preventDefault();
-    console.log("user-search-remove was clicked");
     var id_str = $(this).attr('data_user_id');
     var user_id = parseInt(id_str, 10);
     var checkbox_select = '#group_user_ids_' + id_str;
     $(this).parent().remove();
     $(checkbox_select).prop("checked", false);
     members = members.filter(n => n !== user_id);
-    console.log(members);
     $(this).prop("disabled",false);
   });
-
 });
