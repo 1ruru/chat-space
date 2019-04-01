@@ -68,7 +68,7 @@ $(function(){
       $('.main-body').animate({scrollTop: $('.main-body')[0].scrollHeight}, 1000);
     })
     .fail(function(){
-      alert('自動更新に失敗しました');
+      // alert('自動更新に失敗しました');
     });
   }
 
