@@ -1,5 +1,5 @@
 - @messages.each do |message|
-  .message
+  .message{data_id:"#{message.id}"}
     .message__post-info
       %p.message__post-info--post-user
         = message.user.name

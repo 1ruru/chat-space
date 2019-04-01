@@ -15,7 +15,7 @@
             .main-header__right-box--group-edit
               Edit
     .main-body
-      .messages
+      .messages#messages
         = render partial: 'messages', locals: {messages: @messages }
     .main-form
       = form_for [@group, @message], html:{class:"form-body"} do |f|
