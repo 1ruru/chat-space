@@ -22,8 +22,10 @@
     }
   }
   .side-groups{
+    height: calc(100vh - 100px);
     padding: 0 $pad_side-lr;
     font-weight: bold;
+    overflow: scroll;
     .group{
       padding: $pad_side-group-ud 0;
       &__group-name{
