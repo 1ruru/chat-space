@@ -1,14 +1,14 @@
 $(function(){
   function buildHTML(message){
-    var body = ``
-    var image = ``
+    var body = ``;
+    var image = ``;
     if (!(typeof(message.body) == "undefined")){
       body = `<p class="message__post-message">
                 ${message.body}
-              </p>`
+              </p>`;
     }
     if (!(typeof(message.image_url) == "undefined")){
-      image = `<img src="${message.image_url}" alt="${message.image_alt}">`
+      image = `<img src="${message.image_url}" alt="${message.image_alt}">`;
     }
     var html =`<div class="message" data_id="${message.id}">
                 <div class="message__post-info">
